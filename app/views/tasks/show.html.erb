@@ -1,0 +1,6 @@
+<h1>id:<%= @task.content %>の詳細</h1>
+
+<p><%= @task.content %></p>
+<%= link_to "タスクリストに戻る", tasks_path %>
+<%= link_to "タスクの編集", edit_task_path %>
+<%= link_to "タスクの削除", @tasks, method: :delete %>
