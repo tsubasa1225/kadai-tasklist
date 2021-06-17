@@ -2,6 +2,6 @@
 
 <p>タスク:<%= @task.content %></p>
 <p>状態:<%= @task.status %></p>
-<%= link_to "タスクリストに戻る", tasks_path %>
+<%= link_to "タスクリストに戻る", root_path %>
 <%= link_to "タスクの編集", edit_task_path %>
 <%= link_to "タスクの削除", @tasks, method: :delete %>
