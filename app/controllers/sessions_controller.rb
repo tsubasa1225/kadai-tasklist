@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     if login(name, password)
       flash[:success] = "ログインしました"
-      redirect_to "/"
+      redirect_to root_url
     else
       flash.now[:danger] = "ログインに失敗しました"
       render :new
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:success] = "ログアウトしました"
-    redirect_to "/"
+    redirect_to root_url
   end
   
   def login(name, password)
